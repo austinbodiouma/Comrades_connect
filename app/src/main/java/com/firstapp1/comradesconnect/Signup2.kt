@@ -1,4 +1,4 @@
-package com.firstapp1.comrades_connect
+package com.firstapp1.comradesconnect
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -35,7 +35,7 @@ fun SignUp2(){
             modifier = Modifier
                 .fillMaxWidth()
 
-                .align(Alignment.CenterHorizontally,)
+                .align(Alignment.CenterHorizontally)
                 .padding(top = 20.dp, bottom = 0.dp)
                 .height(100.dp),
 //            vertical arrangement = Arrangement.Bottom,

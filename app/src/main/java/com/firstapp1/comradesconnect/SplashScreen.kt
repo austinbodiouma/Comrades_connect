@@ -1,17 +1,24 @@
-package com.firstapp1.comrades_connect
+package com.firstapp1.comradesconnect
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
@@ -24,30 +31,17 @@ fun Splashscreen() {
 
 
     ) {
-        Text(
-            text = "Comrades",
-            style = TextStyle(
-                fontSize = 40.sp,
-                fontWeight = FontWeight(700),
-                lineHeight = 40.sp,
-                letterSpacing = 0.25.sp,
-                textAlign = TextAlign.Center,
-                color =Color(0xFF0C0CD6)
-            )
+        Image(
+            painter = painterResource(id = R.drawable.__removebg_preview2),
+            contentDescription = "Column Background",
+            modifier = Modifier
+
+                .height(800.dp)
+                .width(360.dp),
 
         )
-        Text(
-            text = "Connect",
 
-            style = TextStyle(
-                fontSize = 40.sp,
-                fontWeight = FontWeight(700),
-                lineHeight = 40.sp,
-                letterSpacing = 0.25.sp,
-                textAlign = TextAlign.Center,
-                color = Color(0xFF0C0CD6),
-            )
-        )
+
 
 
     }
@@ -56,6 +50,8 @@ fun Splashscreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    Splashscreen()
+fun DefaultPreview5() {
+
+        Splashscreen()
+
 }

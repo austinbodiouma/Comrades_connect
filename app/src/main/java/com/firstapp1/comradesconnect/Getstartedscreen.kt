@@ -1,4 +1,4 @@
-package com.firstapp1.comrades_connect
+package com.firstapp1.comradesconnect
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -14,8 +14,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+import com.firstapp1.comradesconnect.R.drawable
+
 
 @Composable
 fun GetStarted() {
@@ -34,55 +38,28 @@ fun GetStarted() {
         Surface(
             modifier = Modifier
                 .fillMaxWidth()
-                .wrapContentSize()
+                .wrapContentHeight()
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 50.dp)
-                .height(50.dp),
+
+                ,
         ) {
-            Text(
-                text = "Comrades",
-                softWrap = true,
-                style = TextStyle(
-                    fontSize = 40.sp,
-                    fontWeight = FontWeight(700),
-                    lineHeight = 40.sp,
-                    letterSpacing = 0.25.sp,
-                    textAlign = TextAlign.Center,
-                    color = Color(0xFF0C0CD6),
+
+                Image(
+                    painter = painterResource(id = drawable.__removebg_preview1),
+                    contentDescription = "Column Background",
+                    modifier = Modifier
+
+                        .height(300.dp)
+                        .width(360.dp),
 
                     )
-            )
 
-        }
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(100.dp)
-        ) {
-            Text(
-                text = "Connect",
-                softWrap = true,
-                style = TextStyle(
-                    fontSize = 40.sp,
-                    fontWeight = FontWeight(700),
-                    lineHeight = 40.sp,
-                    letterSpacing = 0.25.sp,
-                    textAlign = TextAlign.Center,
-                    color = Color(0xFF0C0CD6),
-
-                    )
-            )
         }
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(MaterialTheme.shapes.medium)
-                .border(
-                    width = 1.dp,
-                    color = Color(0xFF0C0CD6),
-                    shape = customShape
-                )
-                .height(800.dp),
+                .height(400.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -191,7 +168,7 @@ fun GetStarted() {
 
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.google_logo),
+                        painter = painterResource(id = drawable.google_logo),
                         contentDescription = "Google",
                         modifier = Modifier
                             .height(39.dp)
@@ -218,7 +195,7 @@ fun GetStarted() {
 
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.facebook_logo),
+                        painter = painterResource(id = drawable.facebook_logo),
                         contentDescription = "Google",
                         modifier = Modifier
                             .height(39.dp)
@@ -231,4 +208,11 @@ fun GetStarted() {
 
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview2() {
+
+        GetStarted()
+
 }

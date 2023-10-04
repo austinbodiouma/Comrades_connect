@@ -1,4 +1,4 @@
-package com.firstapp1.comrades_connect
+package com.firstapp1.comradesconnect
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -15,8 +15,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
 
 @Composable
 fun OptionScreen(){
@@ -334,5 +336,16 @@ fun OptionScreen(){
 
             }
         }
+
+
+
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview4() {
+
+        OptionScreen()
+
 }

@@ -1,4 +1,4 @@
-package com.firstapp1.comrades_connect
+package com.firstapp1.comradesconnect
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -15,6 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -28,66 +29,19 @@ fun SignUp(){
         bottomEnd = 0.dp,
         bottomStart = 0.dp
     )
-    Column(modifier =
-    Modifier
-        .fillMaxSize(),
-
-        ) {
-        Surface(
+    Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .wrapContentSize()
-                .align(Alignment.CenterHorizontally)
-                .padding(top = 5.dp, bottom = 5.dp)
-                .height(50.dp),
-        ) {
-            Text(
-                text = "Comrades",
-                softWrap = true,
-                style = TextStyle(
-                    fontSize = 40.sp,
-                    fontWeight = FontWeight(700),
-                    lineHeight = 40.sp,
-                    letterSpacing = 0.25.sp,
-                    textAlign = TextAlign.Center,
-                    color = Color(0xFF0C0CD6),
-
-                    )
-            )
-
-        }
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp)
-        ) {
-            Text(
-                text = "Connect",
-                softWrap = true,
-                style = TextStyle(
-                    fontSize = 40.sp,
-                    fontWeight = FontWeight(700),
-                    lineHeight = 40.sp,
-                    letterSpacing = 0.25.sp,
-                    textAlign = TextAlign.Center,
-                    color = Color(0xFF0C0CD6),
-
-                    )
-            )
-        }
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(MaterialTheme.shapes.medium)
-                .border(
-                    width = 1.dp,
-                    color = Color(0xFF0C0CD6),
-                    shape = customShape
-                )
-                .height(800.dp),
+                .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+            verticalArrangement = Arrangement.Top
         ) {
+            Image(painter = painterResource(id = R.drawable.__removebg_preview1),
+                contentDescription = "profile_pic",
+                modifier = Modifier
+
+                    .height(200.dp)
+                    .width(360.dp),
+            )
             Text(
                 text = "Sign up",
                 style = TextStyle(
@@ -238,7 +192,7 @@ fun SignUp(){
                         color = Color(0xFF0C0CD6),
                         shape = RoundedCornerShape(10.dp)
                     )
-//
+
                     .clip(RoundedCornerShape(10.dp))
 
             )
@@ -350,5 +304,13 @@ fun SignUp(){
             }
         }
     }
+
+
+
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview6() {
+        SignUp()
 
 }
